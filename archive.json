@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "date": "23 APRIL - 3 MAY",
+    "currency": "USD/INR",
+    "range": "85.55-22.30",
+    "open": "-0.07",
+    "close": "74.30"
+  },
+
+  {
+    "id": 2,
+    "date": "22 APRIL -  26 APRIL",
+    "currency": "AED/INR",
+    "range": "22.55-10.55",
+    "open": "-0.01",
+    "close": "74.30"
+  },
+  {
+    "id": 3,
+    "currency": "EUR/INR",
+    "date": "15 APRIL - 19 MAY",
+    "range": "26.55-35.56",
+    "open": "0.14",
+    "close": "74.30"
+  }
+]

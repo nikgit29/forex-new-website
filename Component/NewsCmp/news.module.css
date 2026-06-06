@@ -1,0 +1,15 @@
+.search {
+  background-color: white;
+  border: 1px solid #6aadfe;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 12px;
+  width: 50%;
+
+  margin-left: 227px;
+}
+
+.searchIcon {
+  margin-top: 8px;
+  color: #ccc;
+}

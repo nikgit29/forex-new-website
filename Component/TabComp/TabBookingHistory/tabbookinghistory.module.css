@@ -1,0 +1,49 @@
+.main {
+  width: 70%;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 15px;
+  padding: 30px 80px;
+  position: relative;
+  top: 20px;
+}
+
+.nameBtn {
+  background-color: #6aadfe;
+  cursor: none !important;
+  border: none;
+}
+
+.totalAmount {
+  border: 1px solid rgb(242, 239, 239);
+  margin-top: 20px;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 12px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.selectYear {
+  border: 1px solid rgb(242, 239, 239);
+  margin-top: 20px;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.pdfBtn {
+  background-color: #6aadfe;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.thead {
+  background-color: #6aadfe;
+  color: #ffffff;
+  cursor: none;
+  font-size: 15px;
+}

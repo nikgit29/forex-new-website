@@ -1,0 +1,16 @@
+.main {
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 15px;
+  padding: 30px 15px;
+  position: relative;
+  top: 20px;
+}
+
+.thead {
+  background-color: #6aadfe;
+  color: #ffffff;
+  cursor: none;
+  font-size: 15px;
+}

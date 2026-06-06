@@ -1,0 +1,47 @@
+.mySwiper {
+  width: 90%;
+  padding-top: 0px;
+  padding-bottom: 40px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 100px;
+}
+
+.testimonial {
+  position: relative;
+  width: 100%;
+  left: -58px;
+  padding: 0 17px;
+}
+
+.img {
+  height: 260px;
+  padding: 9px;
+  border-radius: 31px;
+  /* position: absolute;
+    top:20px; */
+}
+
+.card {
+  width: 240px;
+  height: 415px;
+  border-radius: 20px;
+}
+
+.title {
+  color: #004080;
+  font-size: 16px;
+}
+
+.cardBody {
+  padding: 0px 10px 15px 10px;
+  box-shadow: none;
+}
+.text {
+  line-height: 16px;
+  font-size: 12px;
+  color: "#999a9a";
+}

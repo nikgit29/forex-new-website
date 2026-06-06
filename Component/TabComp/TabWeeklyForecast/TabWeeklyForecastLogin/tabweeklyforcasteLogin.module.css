@@ -1,0 +1,50 @@
+.card {
+  width: 100%;
+  border-radius: 23px;
+  box-shadow: 1px 1px 14px 0px rgb(123 182 255 / 46%);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: center;
+  color: #464646;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn {
+  background-color: #6ee983;
+  border-radius: 8px;
+  border: none;
+  width: 75%;
+}
+
+.btnDowntrend {
+  background-color: #df4759 !important;
+  border-radius: 8px;
+  border: none;
+  width: 75%;
+  cursor: none !important;
+}
+
+.formselect {
+  color: white;
+  width: 123px;
+  height: 27px;
+  margin-left: 40%;
+  margin-right: 50%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  background-color: #7bc3ff;
+  padding-left: 13px;
+  font-size: 13px;
+  border: none;
+  box-shadow: -1px 14px 26px 0px rgba(123, 182, 255, 0.6);
+  letter-spacing: 1px;
+  text-align: center;
+
+  cursor: pointer;
+}

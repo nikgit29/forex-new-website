@@ -1,0 +1,20 @@
+.header {
+  background-color: #6aadfe;
+  font-family: "Poppins", sans-serif;
+  height: 500px;
+}
+.mobHeader {
+  background-color: #6aadfe;
+  font-family: "Poppins", sans-serif;
+}
+.main {
+  background-color: #f4f4f4;
+  font-family: "Poppins", sans-serif;
+  height: 500px;
+}
+
+.footer {
+  background-color: #6aadfe;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}

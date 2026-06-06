@@ -1,0 +1,39 @@
+.content {
+  background-color: #e8e7e7;
+  padding-bottom: 50px;
+}
+
+.forexblues {
+  color: #878585;
+}
+
+.forexbluesContent {
+  color: #898989;
+  margin-top: 20px;
+}
+
+.objective {
+  margin-left: 20px;
+}
+
+.objectiveBox {
+  border-radius: 10px;
+
+  font-size: 12px;
+  width: 200px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 10px;
+  color: #7c7c7c;
+  box-shadow: -2px 4px 14px -5px rgb(131 186 255 / 75%);
+  letter-spacing: 1px;
+}
+
+.advisory {
+  color: #878585;
+}
+
+.testimonials {
+  color: #878585;
+}

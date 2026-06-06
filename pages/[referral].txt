@@ -1,0 +1,326 @@
+import Head from "next/head";
+import { Container, Row, Col } from "react-bootstrap";
+import styles from "../styles/Home.module.css";
+import NavBar from "../Component/Navbar/Nabvar";
+import MobNavbar from "../Component/MobComp/MobNavbar/MobNavbar";
+import MobSaveMoney from "../Component/MobComp/MobHome/MobSaveMoney";
+import MobAnalytics from "../Component/MobComp/MobHome/MobAnalytics";
+import Mobfooter from "../Component/MobComp/MobHome/MobFooter";
+import SaveMoney from "../Component/Home/SaveMoney";
+import Analytics from "../Component/Home/Analytics";
+import Footer from "../Component/Home/Footer";
+import { useRouter } from "next/router";
+import axios from "axios";
+
+// Tablet Component Import
+import TabNavbar from "../Component/TabComp/TabNavbar/TabNavbar";
+import TabSaveMoney from "../Component/TabComp/TabHome/TabSaveMoney";
+import TabAnalytics from "../Component/TabComp/TabHome/TabAnalytics";
+import TabFooter from "../Component/TabComp/TabHome/TabFooter";
+
+// Desktop 1280px
+import MediumDesktopNavbar from "../Component/DesktopComp/DesktopNavbar/MediumDesktopNavbar";
+import MediumDesktopSaveMoney from "../Component/DesktopComp/Home/MediumDesktopSaveMoney";
+import MediumDesktopAnalytics from "../Component/DesktopComp/Home/MediumDesktopAnalytics";
+import MediumDesktopFooter from "../Component/DesktopComp/Home/MediumDesktopFooter";
+const Referral = (data) => {
+  const router = useRouter();
+  const referralPath = router.query.referral;
+  const design = (
+    <>
+      <Head>
+        <title>ForexBlues</title>
+        <meta content={data.metadata.description} name="description" />
+        <meta content={data.metadata.title} name="title" />
+        <meta name="og:site_name" content={data.metadata.title} />
+        <meta property="og:image" content={data.metadata.logo} />
+        <meta property="og:image:width" content="715" />
+        <meta property="og:image:height" content="402" />
+        <meta name="og:description" content={data.metadata.description} />
+        <meta property="og:title" content={data.metadata.title} />
+        <meta property="og:type" content={data.metadata.title} />
+        <link rel="icon" href="/favicon.ico" />
+        <style>
+          {`   
+          @media(min-width:1400px){
+                              
+                .desktopView{
+                  display:block !important;
+                }
+
+                  .desktopMedium{
+                    display:none !important;
+                  }
+
+                .mobileView{
+                  display:none !important;
+                }
+
+                .tabView{
+                  display:none !important;
+                }
+
+              }
+
+              @media(min-width:992px)and (max-width:1399px){
+                              
+                .desktopView{
+                  display:none !important;
+                }
+
+                .desktopMedium{
+                    display:block !important;
+                  }
+
+                .mobileView{
+                  display:none !important;
+                }
+
+                .tabView{
+                  display:none !important;
+                }
+
+              }
+
+             @media(min-width:768px) and (max-width:992px){
+              .mobileView{
+                display:none !important;
+              }
+
+              .desktopMedium{
+                    display:none !important;
+                  }
+          
+              .desktopView{
+                display:none !important;
+              }
+
+              .tabView{
+                display:block !important;
+              }
+             }
+
+              @media(max-width:768px){
+                .mobileView{
+                  display:block !important;
+                }
+
+                .desktopMedium{
+                    display:none !important;
+                  }
+            
+                .desktopView{
+                  display:none !important;
+                }
+
+                .tabView{
+                  display:none !important;
+                }
+              }
+
+              `}
+        </style>
+      </Head>
+
+      <Container
+        fluid
+        className="desktopView"
+        style={{ padding: "0", margin: "0" }}
+      >
+        {/* Start Header Section */}
+        <header className={styles.header}>
+          <Container>
+            <Row>
+              <div
+                style={{
+                  width: "209px",
+                  height: "445px",
+                  backgroundColor: "white",
+                  borderTopRightRadius: "38px",
+                  transform: "rotate(71deg)",
+                  marginTop: "-177px",
+                  marginLeft: "-133px",
+                }}
+              />
+              <Container
+                className="mt-4"
+                style={{
+                  position: "absolute",
+                  zIndex: "999",
+                  top: 0,
+                  left: 0,
+                }}
+              >
+                <NavBar referralPath={referralPath} />
+                <SaveMoney newsSlider={data.data} />
+              </Container>
+            </Row>
+          </Container>
+        </header>
+        {/* End Header Section */}
+
+        {/*Start  Main Section */}
+        <main className={styles.main}>
+          <Analytics />
+        </main>
+        {/*End  Main Section */}
+
+        {/* Start Footer Section */}
+        <footer className={styles.footer}>
+          <Footer />
+        </footer>
+        {/* End Footer Section */}
+      </Container>
+
+      {/* ------------------------------------------------------------------------------------------------------------------------------------------------- */}
+
+      {/* Mobile Version Start  */}
+      {/* Start Mobile Version Header Section */}
+      <Container className="mobileView p-0">
+        <header className={styles.mobHeader}>
+          <Container fluid>
+            <Row>
+              <Col>
+                <MobNavbar mobReferralPath={referralPath} />
+                <MobSaveMoney newsSlider={data.data} />
+              </Col>
+            </Row>
+          </Container>
+        </header>
+        {/* End Mobile Version Header Section */}
+
+        {/* Start Mobile Version Analytics Section */}
+        <main>
+          <Container className={styles.main}>
+            <Row>
+              <Col>
+                <MobAnalytics />
+              </Col>
+            </Row>
+          </Container>
+        </main>
+        {/* End Mobile Version Analytics Section */}
+
+        <footer className={styles.footer}>
+          <Mobfooter />
+        </footer>
+      </Container>
+
+      {/* Mobile Version End */}
+
+      {/* ------------------------------------------------------------------------------------------------------------------------------------------------- */}
+
+      {/* Tablet Version Start  */}
+      {/* Start Tablet Version Header Section */}
+      <Container fluid className="tabView p-0">
+        <header className={styles.mobHeader}>
+          <Container fluid>
+            <Row>
+              <Col>
+                <TabNavbar />
+                <TabSaveMoney newsSlider={data.data} />
+              </Col>
+            </Row>
+          </Container>
+        </header>
+        {/* End Tablet Version Header Section */}
+
+        {/* Start Tablet Version Analytics Section */}
+        <main>
+          <Container fluid className={styles.main}>
+            <Row>
+              <Col>
+                <TabAnalytics />
+              </Col>
+            </Row>
+          </Container>
+        </main>
+        {/* End Tablet Version Analytics Section */}
+
+        <footer className={styles.footer}>
+          <TabFooter />
+        </footer>
+      </Container>
+
+      {/* Tablet Version End */}
+      {/* ---------------------------------------------------------------------------------------------------------- */}
+      {/* Start Desktop 992px to 1399px */}
+      <Container
+        fluid
+        className="desktopMedium"
+        style={{ padding: "0", margin: "0" }}
+      >
+        {/* Start Header Section */}
+        <header className={styles.header}>
+          <Container>
+            <Row>
+              <div
+                style={{
+                  width: "239px",
+                  height: "445px",
+                  backgroundColor: "white",
+                  borderTopRightRadius: "38px",
+                  transform: "rotate(71deg)",
+                  marginTop: "-187px",
+                  marginLeft: "-133px",
+                }}
+              />
+              <Container
+                className="mt-4"
+                style={{
+                  position: "absolute",
+                  zIndex: "999",
+                  top: 0,
+                  left: 0,
+                }}
+              >
+                <MediumDesktopNavbar />
+                <MediumDesktopSaveMoney newsSlider={data.data} />
+              </Container>
+            </Row>
+          </Container>
+        </header>
+        {/* End Header Section */}
+
+        {/*Start  Main Section */}
+        <main className={styles.main}>
+          {" "}
+          <MediumDesktopAnalytics />
+        </main>
+        {/*End  Main Section */}
+
+        {/* Start Footer Section */}
+        <footer className={styles.footer}>
+          <MediumDesktopFooter />
+        </footer>
+        {/* End Footer Section */}
+      </Container>
+      {/* End Desktop 992px to 1399px */}
+    </>
+  );
+
+  return design;
+};
+
+export default Referral;
+// Homepage News Slider
+export const getServerSideProps = async () => {
+  const response = await axios({
+    method: "GET",
+    url: "https://cms.forexblues.com/json/api/homepage-news-slider?authkey=w98dfx4t321sfef9872r54inp54er43rgj0987s",
+  });
+  const metadata = {
+    title: "45 Days Free Trial-ForexBlues",
+    description:
+      "Hii You're Invited to Join Forexblues and Get 45 Days Free Trial. Join Now!",
+    logo: "https://classic.forexblues.com/favicon.png",
+  };
+
+  return {
+    props: {
+      data: response.data,
+      metadata: metadata,
+    },
+  };
+};
+// Homepage News Slider code

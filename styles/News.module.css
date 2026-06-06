@@ -1,0 +1,23 @@
+.header {
+  height: 600px;
+  background-color: #6aadfe;
+  font-family: "Poppins", sans-serif;
+}
+
+.mobHeader {
+  background-color: #6aadfe;
+  font-family: "Poppins", sans-serif;
+}
+.mobNewsMain {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+}
+.main {
+  background-color: #f3f3f3;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer {
+  background-color: #6aadfe;
+  font-family: "Poppins", sans-serif;
+}

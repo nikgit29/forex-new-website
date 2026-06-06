@@ -1,0 +1,9 @@
+.main {
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 15px;
+  padding: 30px 80px;
+  position: relative;
+  top: 20px;
+}

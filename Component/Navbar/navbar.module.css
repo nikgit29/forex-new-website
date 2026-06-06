@@ -1,0 +1,18 @@
+.upperRight {
+  background-color: #7fbbff;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.lowerRight {
+  background-color: #7fbbff;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.messageModal {
+  padding: 0px !important;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 1px;
+}

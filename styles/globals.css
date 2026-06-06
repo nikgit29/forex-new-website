@@ -1,0 +1,162 @@
+@import url("./bootstrap.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  color: #f3f3f3;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #ffffff;
+}
+
+table tr td {
+  border-bottom: none;
+}
+
+table tr:hover {
+  background-color: #f9f8f8;
+}
+
+.modal-content {
+  border-radius: 20px !important;
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.42) !important;
+}
+.btn-close {
+  font-size: 10px !important;
+}
+
+.modal {
+  backdrop-filter: blur(3px);
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  margin-left: 24px !important;
+  font-size: 20px !important;
+  color: #ffffff !important;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  margin-left: 24px !important;
+  font-size: 20px !important;
+  color: #ffffff !important;
+}
+
+.accordion-header button {
+  height: 35px;
+}
+
+/* news slide */
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev,
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  background-color: #fff !important;
+  border-radius: 30px !important;
+  padding: 20px !important;
+  box-shadow: 2px 3px 20px 0px rgba(0, 0, 0, 0.75) !important;
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  color: blue !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  margin-right: 22px;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  color: blue !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  margin-right: 20px;
+}
+
+/* Styles for the container div */
+
+/* Adjust the width of the .fb-like div based on the screen size */
+/* You can modify these breakpoints and widths to suit your design */
+@media only screen and (max-width: 767px) {
+  .fb-like-container {
+    display: none; /* Ensure it only takes the necessary width */
+  }
+
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev,
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    background-color: #fff !important;
+    border-radius: 30px !important;
+    padding: 20px !important;
+    box-shadow: 2px 3px 20px 0px rgba(179, 176, 176, 0.75) !important;
+    margin-top: -55px !important;
+  }
+}
+
+/* 404 page button */
+
+.button {
+  background-color: #6aadfe;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  padding: 8px 50px;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+@keyframes shakeX {
+  0% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

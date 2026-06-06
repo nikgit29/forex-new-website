@@ -1,0 +1,57 @@
+.plate {
+  background-color: #ffffff;
+  width: 350px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.btn {
+  margin-top: 20px;
+  width: 90%;
+  background-color: #5871a9;
+  border-radius: 20px;
+  border: none;
+  font-size: 12px;
+  margin-right: 40px;
+  margin-bottom: 10px;
+}
+
+.content {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.referal {
+  width: 350px;
+  border: 3px dotted #6aadfe;
+  margin-bottom: 15px;
+  background-color: #fff;
+  padding: 5px;
+  font-family: Poppins;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.referalField {
+  height: 30px;
+  box-shadow: none !important;
+  font-size: 12px;
+}
+
+.logout {
+  background-color: #ffffff;
+  width: 361px;
+  margin-bottom: 20px;
+  justify-content: center;
+  border-radius: 20px;
+  text-align: center;
+  color: #919191;
+}
+
+.logoutBtn {
+  width: 50%;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  background-color: #e96e6e;
+  border: none;
+}

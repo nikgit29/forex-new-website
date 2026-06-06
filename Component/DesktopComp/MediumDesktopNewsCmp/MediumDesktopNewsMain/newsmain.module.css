@@ -1,0 +1,17 @@
+.container {
+  padding: 100px;
+  background-color: #ffffff;
+}
+
+.img {
+  border-radius: 10px;
+  padding: 0;
+}
+
+.desc {
+  margin-top: 20px;
+  color: #000000;
+  font-family: "Montserrat";
+  font-size: 18px;
+  line-height: 31px;
+}

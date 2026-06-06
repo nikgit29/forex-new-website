@@ -1,0 +1,27 @@
+.header {
+  height: 600px;
+  background-color: #6aadfe;
+  font-family: "Poppins", sans-serif;
+}
+
+.mobHeader {
+  background-color: #6aadfe;
+  font-family: "Poppins", sans-serif;
+}
+
+.main {
+  background-color: #f4f5f7;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer {
+  background-color: #6aadfe;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (min-width: 992px) and (max-width: 1399px) {
+  .logobox {
+    width: 239px !important;
+    margin-top: -187px !important;
+  }
+}
