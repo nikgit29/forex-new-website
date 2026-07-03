@@ -587,7 +587,8 @@ const SignUp = () => {
                       target="_blank"
                       style={{ cursor: "pointer", textDecoration: "none" }}
                     >
-                      <span>Accept terms & condition</span>
+                  
+                      <span>I hearby authorise to send notification via SMS, Email, RCS and others as per Terms of Service/Privacy Policy.</span>
                     </a>
                   </Link>
                 </div>

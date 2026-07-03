@@ -547,7 +547,7 @@ const MobSignup = () => {
               <div className="d-flex justify-content-center">
                 <Form.Check
                   type="checkbox"
-                  label="Accept terms & condition"
+                  label="I hearby authorise to send notification via SMS, Email, RCS and others as per Terms of Service/Privacy Policy."
                   onClick={checkBoxs}
                 />
               </div>
