@@ -10,20 +10,31 @@ const DailyForcast = () => {
   const [formatedTime, setFormatedTime] = useState();
   const [checkSatSun, setCheckSatSun] = useState();
 
-  const commodityDailyforecast = async () => {
+  const commodityDailyforecast = async (signal) => {
     try {
       const response = await axios({
         method: "GET",
         url: "/commodity-dailyforecast-v2.php",
+        signal,
       });
-      setDailyforcast(response.data);
+      const forecastData = Array.isArray(response.data)
+        ? response.data
+        : Array.isArray(response.data?.data)
+        ? response.data.data
+        : [];
+      setDailyforcast(forecastData);
     } catch (err) {
-      console.log(err);
+      if (!axios.isCancel(err)) {
+        console.log(err);
+      }
     }
   };
 
   useEffect(() => {
-    commodityDailyforecast();
+    const controller = new AbortController();
+    commodityDailyforecast(controller.signal);
+
+    return () => controller.abort();
   }, []);
 
   const formatAMPM = async () => {
@@ -39,23 +50,18 @@ const DailyForcast = () => {
     }
   };
 
-  const getTime = moment().format("HH:mm");
-
-  const refreshTime = () => {
-    if (getTime >= "09:30" && getTime <= "17:00") {
-      setFormatedTime(true);
-    } else {
-      setFormatedTime(false);
-    }
-  };
-
   useEffect(() => {
+    const refreshTime = () => {
+      const currentTime = moment().format("HH:mm");
+      setFormatedTime(currentTime >= "09:30" && currentTime <= "17:00");
+    };
+
     refreshTime();
-    setInterval(() => {
+    const intervalId = setInterval(() => {
       refreshTime();
     }, 30000);
 
-    return () => {};
+    return () => clearInterval(intervalId);
   }, []);
 
   useEffect(() => {

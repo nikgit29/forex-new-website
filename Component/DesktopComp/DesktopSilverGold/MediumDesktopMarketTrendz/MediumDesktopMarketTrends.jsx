@@ -7,20 +7,31 @@ import { useState } from "react";
 const Market = () => {
   const [trendz, setTrendz] = useState([]);
   const [colour, setColour] = useState("");
-  const MarketTrendzData = async () => {
+  const MarketTrendzData = async (signal) => {
     try {
       const response = await axios({
         method: "GET",
         url: "/commodity-dailyforecast-v2.php",
+        signal,
       });
-      setTrendz(response.data);
+      const forecastData = Array.isArray(response.data)
+        ? response.data
+        : Array.isArray(response.data?.data)
+        ? response.data.data
+        : [];
+      setTrendz(forecastData);
     } catch (err) {
-      console.log(err);
+      if (!axios.isCancel(err)) {
+        console.log(err);
+      }
     }
   };
 
   useEffect(() => {
-    MarketTrendzData();
+    const controller = new AbortController();
+    MarketTrendzData(controller.signal);
+
+    return () => controller.abort();
   }, []);
 
   const RateTable = ({ data }) => {

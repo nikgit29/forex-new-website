@@ -9,20 +9,31 @@ const DailyForcast = () => {
   const [formatedTime, setFormatedTime] = useState();
   const [checkSatSun, setCheckSatSun] = useState();
 
-  const commodityDailyforecast = async () => {
+  const commodityDailyforecast = async (signal) => {
     try {
       const response = await axios({
         method: "GET",
         url: "/commodity-dailyforecast-v2.php",
+        signal,
       });
-      setDailyforcast(response.data);
+      const forecastData = Array.isArray(response.data)
+        ? response.data
+        : Array.isArray(response.data?.data)
+        ? response.data.data
+        : [];
+      setDailyforcast(forecastData);
     } catch (err) {
-      console.log(err);
+      if (!axios.isCancel(err)) {
+        console.log(err);
+      }
     }
   };
 
   useEffect(() => {
-    commodityDailyforecast();
+    const controller = new AbortController();
+    commodityDailyforecast(controller.signal);
+
+    return () => controller.abort();
   }, []);
 
   const formatAMPM = async () => {
